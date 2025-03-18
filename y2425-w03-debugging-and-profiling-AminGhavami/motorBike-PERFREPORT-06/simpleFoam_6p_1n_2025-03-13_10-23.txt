@@ -1,0 +1,64 @@
+Command:        mpirun -n 6 simpleFoam -parallel
+Resources:      1 node (128 physical, 128 logical cores per node)
+Memory:         251 GiB per node
+Tasks:          6 processes
+Machine:        aion-0220
+Start time:     Thu Mar 13 2025 10:23:26 (UTC+01)
+Total time:     162 seconds (about 3 minutes)
+Full path:      /mnt/aiongpfs/apps/resif/aion/2020b/epyc/software/OpenFOAM/8-foss-2020b/OpenFOAM-8/platforms/linux64GccDPInt32Opt/bin
+
+Summary: simpleFoam is Compute-bound in this configuration
+Compute:                                     81.2% |=======|
+MPI:                                         18.7% |=|
+I/O:                                          0.2% ||
+This application run was Compute-bound. A breakdown of this time and advice for investigating further is in the CPU section below. 
+As little time is spent in MPI calls, this code may also benefit from running at larger scales.
+
+CPU:
+A breakdown of the 81.2% CPU time:
+Scalar numeric ops:                          20.3% |=|
+Vector numeric ops:                           7.1% ||
+Memory accesses:                             72.6% |======|
+The per-core performance is memory-bound. Use a profiler to identify time-consuming loops and check their cache performance.
+Little time is spent in vectorized instructions. Check the compiler's vectorization advice to see why key loops could not be vectorized.
+
+MPI:
+A breakdown of the 18.7% MPI time:
+Time in collective calls:                    11.4% ||
+Time in point-to-point calls:                88.6% |========|
+Effective process collective rate:             552 kB/s
+Effective process point-to-point rate:         234 MB/s
+Most of the time is spent in point-to-point calls with an average transfer rate. Using larger messages and overlapping communication and computation may increase the effective transfer rate.
+
+I/O:
+A breakdown of the 0.2% I/O time:
+Time in reads:                                0.0% |
+Time in writes:                             100.0% |=========|
+Effective process read rate:                  0.00 bytes/s
+Effective process write rate:                  112 MB/s
+Most of the time is spent in write operations with an average effective transfer rate. It may be possible to achieve faster effective transfer rates using asynchronous file operations.
+
+Threads:
+A breakdown of how multiple threads were used:
+Computation:                                100.0% |=========|
+Synchronization:                              0.0% |
+Physical core utilization:                    4.6% ||
+System load:                                  5.0% ||
+Physical core utilization is low. Try increasing the number of threads or processes to improve performance.
+
+Memory:
+Per-process memory usage may also affect scaling:
+Mean process memory usage:                     299 MiB
+Peak process memory usage:                     311 MiB
+Peak node memory usage:                       7.0% ||
+The peak node memory usage is very low. Running with fewer MPI processes and more data on each process may be more efficient.
+
+Energy:
+A breakdown of how the 9.12 Wh was used:
+CPU:                                        100.0% |=========|
+System:                                   not supported
+Mean node power:                          not supported
+Peak node power:                              0.00 W
+The whole system energy has been calculated using the CPU energy usage.
+System power metrics: No Arm IPMI Energy Agent config file found in /var/spool/ipmi-energy-agent. Did you start the Arm IPMI Energy Agent?
+

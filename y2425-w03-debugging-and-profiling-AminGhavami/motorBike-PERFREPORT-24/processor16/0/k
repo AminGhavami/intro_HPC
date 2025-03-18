@@ -1,0 +1,578 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.24;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            slip;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      nonuniform List<scalar> 
+0
+;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    lowerWall
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    upperWall
+    {
+        type            slip;
+    }
+    motorBike_frt-fairing:001%1
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_windshield:002%2
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-rim:005%5
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-rim:010%10
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-rim:011%11
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-brake-disk:012%12
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frame:016-shadow%13
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-susp:014%14
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-susp:014-shadow%15
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frame:016%16
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-rim:005-shadow%17
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-chain-hub:022%22
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rearseat%24
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frt-fairing%25
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_windshield%26
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_headlights%27
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_driversseat%28
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-body%29
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fuel-tank%30
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_exhaust%31
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-rim%32
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-mud-guard%33
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-rim%34
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-brake-disk%35
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-brake-caliper%36
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-tyre%37
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_hbars%38
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-forks%39
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_chain%40
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-tyre%41
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_square-dial%42
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_round-dial%43
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_dial-holder%44
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-susp%45
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-brake-lights%46
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-light-bracket%47
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frame%48
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-mud-guard%49
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-susp-spring-damp%50
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fairing-inner-plate%51
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_clutch-housing%52
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_radiator%53
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_water-pipe%54
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_water-pump%55
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_engine%56
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-shock-link%57
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-brake-fluid-pot-bracket%58
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-brake-fluid-pot%59
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_footpeg%60
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-chain-hub%61
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-brake-caliper%62
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rider-helmet%65
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rider-visor%66
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rider-boots%67
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rider-gloves%68
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rider-body%69
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frame:0%70
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_frt-fairing:001-shadow%74
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_windshield-shadow%75
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-mud-guard-shadow%81
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_fr-wh-brake-disk-shadow%83
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-mud-guard-shadow%84
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-susp-spring-damp-shadow%85
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_radiator-shadow%86
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-shock-link-shadow%87
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rear-brake-fluid-pot-bracket-shadow%88
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    motorBike_rr-wh-chain-hub-shadow%89
+    {
+        type            kqRWallFunction;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    procBoundary16to0
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to2
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to3
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to4
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to5
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to12
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to15
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to17
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to22
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+    procBoundary16to23
+    {
+        type            processor;
+        value           uniform 0.24;
+    }
+}
+
+
+// ************************************************************************* //
