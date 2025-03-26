@@ -1,4 +1,11 @@
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPC Guide</title>
+</head>
+<body>
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -1358,4 +1365,7 @@ Finalize your report and save it as a PDF (no other format allowed!) in the <cod
       
     
   </body>
+</html>
+
+</body>
 </html>
