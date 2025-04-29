@@ -1,0 +1,57 @@
+#coding=utf-8
+# path or URL to sample sheet (TSV format, columns: sample, condition, ...)
+samples: config/samples.tsv
+# path or URL to sequencing unit sheet (TSV format, columns: sample, unit, fq1, fq2, 
+# strandedness). Units are technical replicates (e.g. lanes, or resequencing of the 
+# same biological sample).If the column "strandedness" is present (which is optional), 
+# can be empty or has one of these values: none, yes or reverse. none is for unstranded 
+# protocols, yes an reverse follow the nomenclature used in `htseq-count --reverse` 
+# which is referenced in STAR manual section 7, "Counting number of reads per gene".
+
+units: config/units.tsv
+
+# Adapter Removal
+trimming:
+  # skip trimming: false or true
+  skip: false
+  threads: 2
+  # Adapter from https://emea.support.illumina.com/bulletins/2016/12/what-sequences-do-i-use-for-adapter-trimming.html
+  adapter1: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+  adapter2: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+  min_length: 35
+
+ref:
+  species: "homo_sapiens"
+  build: "GRCh38"
+  release: "102"
+
+# Run CeL-ID for cell lines identification (only works if ref build is GRCh38)
+celid: false
+
+pca:
+  labels:
+    # columns of sample sheet to use for PCA
+    - condition
+
+diffexp:
+  contrasts:
+    # contrasts for the deseq2 results method
+    # write down EFFECT_vs_CONTROL:
+    #  - FULLNAME_CONTROL
+    #  - FULLNAME_EFFECT
+    SK_D14_vs_SK_D0:
+      - SK_D0
+      - SK_D14
+    SK_D4_vs_SK_D0:
+      - SK_D0
+      - SK_D4
+    SK_D33_vs_SK_D0:
+      - SK_D0
+      - SK_D33
+
+
+params:
+  star: "  --twopassMode Basic --outSAMtype BAM SortedByCoordinate --limitOutSJcollapsed 1000000 --limitSjdbInsertNsj 1000000 --outFilterMultimapNmax 100 --outFilterMismatchNmax 33 --outFilterMismatchNoverLmax 0.3 --seedSearchStartLmax 12 --alignSJoverhangMin 15 --alignEndsType Local --outFilterMatchNminOverLread 0 --outFilterScoreMinOverLread 0.3 --winAnchorMultimapNmax 50  --alignSJDBoverhangMin 3 "
+  bowtie_path: "/usr/local/bin/"
+  db_bowtie_path: "/mnt/data/FastQ_Screen_Genomes/"
+  testing: false

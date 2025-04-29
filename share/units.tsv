@@ -1,0 +1,15 @@
+sample	unit	fq1	fq2	strandedness
+SK_D0_1	1	fastq/C1_S13_R1_001.fastq.gz	fastq/C1_S13_R2_001.fastq.gz	reverse
+SK_D0_2	1	fastq/C2_S14_R1_001.fastq.gz	fastq/C2_S14_R2_001.fastq.gz	reverse
+SK_D0_3	1	fastq/C3_S15_R1_001.fastq.gz	fastq/C3_S15_R2_001.fastq.gz	reverse
+SK_D0_4	1	fastq/9_condition-3_S3_R1_001.fastq.gz	fastq/9_condition-3_S3_R2_001.fastq.gz	reverse
+SK_D4_1	1	fastq/21_condition-6_S10_R1_001.fastq.gz	fastq/21_condition-6_S10_R2_001.fastq.gz	reverse
+SK_D4_2	1	fastq/22_condition-6_S11_R1_001.fastq.gz	fastq/22_condition-6_S11_R2_001.fastq.gz	reverse
+SK_D4_3	1	fastq/17_condition-5_S7_R1_001.fastq.gz	fastq/17_condition-5_S7_R2_001.fastq.gz	reverse
+SK_D4_4	1	fastq/4_rep-23_S4_R1_001.fastq.gz	fastq/4_rep-23_S4_R2_001.fastq.gz	reverse
+SK_D14_1	1	fastq/33_condition-9_S19_R1_001.fastq.gz	fastq/33_condition-9_S19_R2_001.fastq.gz	reverse
+SK_D14_2	1	fastq/34_condition-9_S20_R1_001.fastq.gz	fastq/34_condition-9_S20_R2_001.fastq.gz	reverse
+SK_D14_3	1	fastq/35_condition-9_S21_R1_001.fastq.gz	fastq/35_condition-9_S21_R2_001.fastq.gz	reverse
+SK_D33_1	1	fastq/C5_S16_R1_001.fastq.gz	fastq/C5_S16_R2_001.fastq.gz	reverse
+SK_D33_2	1	fastq/C6_S17_R1_001.fastq.gz	fastq/C6_S17_R2_001.fastq.gz	reverse
+SK_D33_3	1	fastq/C7_S18_R1_001.fastq.gz	fastq/C7_S18_R2_001.fastq.gz	reverse
