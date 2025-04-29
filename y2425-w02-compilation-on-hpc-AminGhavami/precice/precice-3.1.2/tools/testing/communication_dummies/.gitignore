@@ -1,9 +1,0 @@
-*/.build
-*/bin
-*/build
-*/components/java
-*/lib
-
-*/*.cmd
-**/*.vtk
-**/log*.txt

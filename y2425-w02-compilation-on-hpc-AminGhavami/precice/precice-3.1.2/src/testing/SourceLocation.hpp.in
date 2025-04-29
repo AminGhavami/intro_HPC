@@ -1,5 +1,0 @@
-#pragma once
-
-namespace precice::testing {
-const char *SourceLocation = "@preCICE_SOURCE_DIR@";
-}
